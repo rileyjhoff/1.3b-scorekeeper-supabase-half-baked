@@ -3,17 +3,17 @@ import { renderGame, renderTeam } from '../render-utils.js';
 
 const test = QUnit.test;
 
-const game = {
-    name1: 'Team One',
-    name2: 'Team Two',
-    score1: 0,
-    score2: 0
-};
-
 test('tests to see if renderTeam() returns a Node if passed a string and a number as arguments', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = true;
+
+    const game = {
+        name1: 'Team One',
+        name2: 'Team Two',
+        score1: 0,
+        score2: 0
+    };
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -28,6 +28,13 @@ test('tests to see if renderGame() returns a Node if passed an object as an argu
     //Arrange
     // Set up your arguments and expectations
     const expected = true;
+
+    const game = {
+        name1: 'Team One',
+        name2: 'Team Two',
+        score1: 0,
+        score2: 0
+    };
     
     //Act 
     // Call the function you're testing and set the result to a const
