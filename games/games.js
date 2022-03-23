@@ -74,7 +74,9 @@ finishGameButton.addEventListener('click', async() => {
     name2 = '';
     score1 = 0;
     score2 = 0;
-    displayCurrentGameEl();
+    teamOneLabel.textContent = 'Team One';
+    teamTwoLabel.textContent = 'Team Two';
+    currentGameEl.textContent = '';
 });
 
 logoutButton.addEventListener('click', () => {
