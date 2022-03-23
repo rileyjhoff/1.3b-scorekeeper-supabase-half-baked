@@ -15,7 +15,7 @@ test('tests to see if renderTeam() returns a DOM element if passed a string and 
         score2: 0
     };
 
-    const HTMLDivElement = document.ELEMENT_NODE;
+    const HTMLDivElement = document.createElement('div');
 
     //Act 
     // Call the function you're testing and set the result to a const
