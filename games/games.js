@@ -28,39 +28,40 @@ let score2 = 0;
 
 nameForm.addEventListener('submit', (e) => {
     // don't forget to prevent the default form behavior!
-
+    e.preventDefault();
     // get the name data from the form
-
+    const data = new FormData(nameForm);
     // set the state to this data from the form
-
+    name1 = data.get('team-one');
+    name2 = data.get('team-two');
     // reset the form values
-
-    displayCurrentGameEl()
+    nameForm.reset;
+    displayCurrentGameEl();
 });
 
 
 teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score
     
-    displayCurrentGameEl()
+    displayCurrentGameEl();
 });
 
 teamTwoAddButton.addEventListener('click', () => {
     // increment the current state for team two's score
 
-    displayCurrentGameEl()
+    displayCurrentGameEl();
 });
 
 teamOneSubtractButton.addEventListener('click', () => {
     // decrement the current state for team one's score
 
-    displayCurrentGameEl()
+    displayCurrentGameEl();
 });
 
 teamTwoSubtractButton.addEventListener('click', () => {
     // decrement the current state for team two's score
 
-    displayCurrentGameEl()
+    displayCurrentGameEl();
 });
 
 finishGameButton.addEventListener('click', async() => {
@@ -88,7 +89,7 @@ window.addEventListener('', async() => {
 
 function displayCurrentGameEl() {
     // clear out the current game div
-
+    
     // change the label to show team one's name;
     // change the label to show team two's name;
 
