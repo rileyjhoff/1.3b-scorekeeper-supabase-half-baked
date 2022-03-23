@@ -14,12 +14,10 @@ test('tests to see if renderTeam() returns a DOM element if passed a string and 
         score1: 0,
         score2: 0
     };
-    
-    const isDOM = el => el instanceof Element;
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = isDOM(renderTeam(game.name1, game.score1));
+    const actual = renderTeam(game.name1, game.score1) instanceof HTMLDivElement;
 
     //Expect
     // Make assertions about what is expected versus the actual result
