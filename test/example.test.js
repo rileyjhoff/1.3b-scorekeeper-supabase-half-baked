@@ -15,6 +15,8 @@ test('tests to see if renderTeam() returns a DOM element if passed a string and 
         score2: 0
     };
 
+    const HTMLDivElement = HTMLDivElement;
+    
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderTeam(game.name1, game.score1) instanceof HTMLDivElement;
