@@ -77,6 +77,7 @@ finishGameButton.addEventListener('click', async() => {
     teamOneLabel.textContent = 'Team One';
     teamTwoLabel.textContent = 'Team Two';
     currentGameEl.textContent = '';
+    disableButtons();
 });
 
 logoutButton.addEventListener('click', () => {
@@ -102,6 +103,7 @@ function displayCurrentGameEl() {
     const newGame = renderGame(game);
     // append the element to the cleared out current game div
     currentGameEl.append(newGame);
+    disableButtons();
 }
 
 
@@ -118,5 +120,20 @@ async function displayAllGames() {
     }
 }
 
+function disableButtons() {
+    if (currentGameEl.textContent === '') {
+        teamOneAddButton.disabled = true;
+        teamOneSubtractButton.disabled = true;
+        teamTwoAddButton.disabled = true;
+        teamTwoSubtractButton.disabled = true;
+        finishGameButton.disabled = true;
+    } else {
+        teamOneAddButton.disabled = false;
+        teamOneSubtractButton.disabled = false;
+        teamTwoAddButton.disabled = false;
+        teamTwoSubtractButton.disabled = false;
+        finishGameButton.disabled = false;
+    }
+}
 
-displayCurrentGameEl();
+disableButtons();
