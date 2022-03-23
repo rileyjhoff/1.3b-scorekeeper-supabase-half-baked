@@ -35,7 +35,7 @@ nameForm.addEventListener('submit', (e) => {
     name1 = data.get('team-one');
     name2 = data.get('team-two');
     // reset the form values
-    nameForm.reset;
+    nameForm.reset();
     displayCurrentGameEl();
 });
 
