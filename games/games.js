@@ -5,7 +5,7 @@ import {
     createGame,
     deleteGame
 } from '../fetch-utils.js';
-import { renderEditableGame, renderGame } from '../render-utils.js';
+import { renderGame } from '../render-utils.js';
 
 const currentGameEl = document.getElementById('current-game-container');
 const pastGamesEl = document.getElementById('past-games-container');
