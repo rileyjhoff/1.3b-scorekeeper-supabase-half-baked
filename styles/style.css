@@ -213,3 +213,11 @@ p {
     right: 20px;
     top: 20px;
 }
+
+.edit {
+    width: 100%;
+}
+
+#edit-form {
+    display: flex;
+}
