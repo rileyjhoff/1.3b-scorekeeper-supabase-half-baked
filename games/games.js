@@ -5,7 +5,7 @@ import {
     createGame,
     deleteGame
 } from '../fetch-utils.js';
-import { renderGame } from '../render-utils.js';
+import { renderEditableGame, renderGame } from '../render-utils.js';
 
 const currentGameEl = document.getElementById('current-game-container');
 const pastGamesEl = document.getElementById('past-games-container');
@@ -118,8 +118,22 @@ async function displayAllGames() {
     for (let game of allGames) {
         const gameDiv = renderGame(game);
         gameDiv.addEventListener('click', async() => {
+            // const editableGameDiv = renderEditableGame(game);
             await deleteGame(game);
             displayAllGames();
+            // pastGamesEl.append(editableGameDiv);
+            // const editForm = document.getElementById('edit-form');
+            // editForm.addEventListener('submit', async(e) => {
+            //     e.preventDefault();
+            //     const data = new FormData(editForm);
+            //     name1 = data.get('edit-team-one-name');
+            //     name2 = data.get('edit-team-two-name');
+            //     score1 = data.get('edit-team-one-score');
+            //     score2 = data.get('edit-team-two-score');
+            //     const editedGame = { name1:name1, name2:name2, score1:score1, score2:score2 };
+            //     await createGame(editedGame);
+            //     displayAllGames();
+            // });
         });
         pastGamesEl.append(gameDiv);
     }

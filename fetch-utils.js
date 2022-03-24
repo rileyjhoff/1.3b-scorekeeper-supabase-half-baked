@@ -31,7 +31,7 @@ export async function deleteGame(game) {
         .from('games')
         .delete()
         .match({ id: game.id });
-        
+
     return checkError(response);
 }
 
@@ -47,7 +47,6 @@ export async function getGames() {
 export async function getUser() {
     return client.auth.session();
 }
-
 
 export async function checkAuth() {
     const user = await getUser();
