@@ -26,6 +26,15 @@ export async function createGame(game){
     return checkError(response);
 }
 
+export async function deleteGame(game) {
+    const response = await client
+        .from('games')
+        .delete()
+        .match({ id: game.id });
+        
+    return checkError(response);
+}
+
 export async function getGames() {
     // select all games from the games table
     const response = await client

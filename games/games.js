@@ -3,6 +3,7 @@ import {
     checkAuth,
     getGames,
     createGame,
+    deleteGame
 } from '../fetch-utils.js';
 import { renderGame } from '../render-utils.js';
 
@@ -116,6 +117,10 @@ async function displayAllGames() {
     // render and append a past game for each past game in state
     for (let game of allGames) {
         const gameDiv = renderGame(game);
+        gameDiv.addEventListener('click', async() => {
+            await deleteGame(game);
+            displayAllGames();
+        });
         pastGamesEl.append(gameDiv);
     }
 }
